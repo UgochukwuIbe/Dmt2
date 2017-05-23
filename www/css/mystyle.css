@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+img, object{
+   max-height:auto;
+   max-width:100%;
+}
+
+     
+         
+      /* maintain navbar size on tablet */
+        @media screen and (min-width: 481px) {
+          #nav1 {
+              width: 30%;
+              float: left;
+			  margin-left: 20%
+              }
+           
+          #nav2 {
+                width: 30%;
+                float: right;
+			    margin-right: 20%
+            }
+             
+        
+        }
+
+ @media screen and (min-width: 481px) {
+          #Aboutapptext {
+			  margin-left: 10%
+              }
+}
