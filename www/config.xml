@@ -51,7 +51,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
 	<gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-	<plugin name="cordova-plugin-vibration" source="pgb" spec="~2.1.5" />
+	<plugin name="cordova-plugin-vibration" />
 	
 	<!--to specify the platforms you want available for phonegap to build -->
 	<gap:platform name="ios" />
