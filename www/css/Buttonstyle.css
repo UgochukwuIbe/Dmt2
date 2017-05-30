@@ -1,0 +1,20 @@
+
+/* When this two lines are removed the buttons would go back to default corner state */
+.ui-btn-corner-all,
+.ui-btn.ui-corner-all,
+
+/* Make buttons look Rounded rectangle */
+.ui-li-count {
+	-webkit-border-radius: .3125em /*{global-radii-buttons}*/;
+	border-radius: .3125em /*{global-radii-buttons}*/;
+}
+/* Icon-only buttons remain corner, round or elipse */
+.ui-btn-icon-notext.ui-btn-corner-all,
+.ui-btn-icon-notext.ui-corner-all {
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+
+
+
+

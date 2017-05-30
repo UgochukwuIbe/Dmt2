@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>jQuery Mobile Web App</title>
 <link href="css/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/Buttonstyle.css"/>
 <link href="css/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 a:link {
@@ -25,6 +26,24 @@ a:active {
 <script src="js/Myscript.js"></script>
 <script src="cordova.js"></script>
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+</script>
 </head>
 
 
@@ -70,20 +89,20 @@ a:active {
     </div><!-- /panel -->
  </div>    
 
-<div data-role="page" id="page2">
+<div data-role="page" id="page2" data-theme="a">
 	<div data-role="header" data-position="fixed" data-theme="b">
 		<h1>About</h1>
         <a href="#page" data-transition="slidedown"
          class="ui-btn-left">back</a></div>
 	
 	<div data-role="content">
-	  <p style="color: #3063DB">This is a design company, and we are skilled in creating beautiful designs in our graphics and  animations for use in entertainment, advertisement  and TV commercials. </p>
-	  <p style="color: #3063DB">We pay attention to details to create a well crafted design for our customers to use and present their businesses to the public. Whether you are an existing business or a start-up, you can market your products and services digitally. </p>
-	  <p style="color: #3063DB">We offer comprehensive services designed to allow the company to do whatever it takes to satisfy our customers.
+	  <p style="color: #99A8CB">This is a design company, and we are skilled in creating beautiful designs in our graphics and  animations for use in entertainment, advertisement  and TV commercials. </p>
+	  <p style="color: #99A8CB">We pay attention to details to create a well crafted design for our customers to use and present their businesses to the public. Whether you are an existing business or a start-up, you can market your products and services digitally. </p>
+	  <p style="color: #99A8CB">We offer comprehensive services designed to allow the company to do whatever it takes to satisfy our customers.
       </p>
-	  <span style="color: #3063DB"></span>
-	  <p style="color: #3063DB">We are focused on a wide variety of design fields and we render the best quality design services to our customers. </p>
-	  <p style="color: #3063DB">Now is the age of computers and the internet has made this world a global village. Almost all sorts of information can be collected from millions of websites on internet and this is where we come in with our designers and developers who are skilled in creating interactive websites to showcase your business contents. </p>	
+	  <span style="color: #99A8CB"></span>
+	  <p style="color: #99A8CB">We are focused on a wide variety of design fields and we render the best quality design services to our customers. </p>
+	  <p style="color: #99A8CB">Now is the age of computers and the internet has made this world a global village. Almost all sorts of information can be collected from millions of websites on internet and this is where we come in with our designers and developers who are skilled in creating interactive websites to showcase your business contents. </p>	
 		
         
         
@@ -92,13 +111,13 @@ a:active {
         
         		
 	</div>
-	<div data-role="footer" data-position="fixed" data-theme="c">
+	<div data-role="footer" data-position="fixed" data-theme="d">
 		<h4>Footer</h4>
 	</div>
 </div>
 
-<div data-role="page" id="page3">
-	<div data-role="header" data-position="fixed" data-theme="b">
+<div data-role="page" id="page3" data-theme="a">
+	<div data-role="header"  data-position="fixed" data-theme="b">
 		<h1>Services</h1>
         <a href="#page" data-transition="flip"data-direction="reverse" class="ui-btn-left">back</a></div>
 	
@@ -134,7 +153,7 @@ a:active {
         </div>
         <div data-role="collapsible" data-collapsed="true">
 	      <h3>Video and Motion Graphics</h3>
-	      <p>Captivating motion graphics</p>
+	      <p>Captivating motion graphics and visual effects</p>
         </div>
         <div data-role="collapsible" data-collapsed="true">
 	      <h3>Photograhy and Image Retouching</h3>
@@ -145,8 +164,8 @@ a:active {
       </div>	
 				
 	
-	<div data-role="footer" data-position="fixed" data-theme="c">
-		<h4>Page Footer</h4>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<h4>Footer</h4>
 	</div>
 </div>
 
@@ -155,7 +174,7 @@ a:active {
 		<h1>Jobs</h1><a href="#page" data-transition="slidedown" class="ui-btn-left">back</a>
 	</div>
 	<div data-role="content">
-     <ul data-role="listview">
+     <ul data-role="listview" data-theme="d">
 	    <li><a href="#">
         <img src="img/Banner.png" class="ui-li-has-thumb ui-shadow"/>
 	      <h2>Graphics Design</h2>
@@ -175,29 +194,29 @@ a:active {
 	      </a></li>
       </ul>
     </div>
-	<div data-role="footer" data-position="fixed" data-theme="c">
-		<h4>Page Footer</h4>
+	<div data-role="footer" data-position="fixed" data-theme="d">
+		<h4>Footer</h4>
 	</div>
 </div>
 
-<div data-role="page" id="page5">
+<div data-role="page" id="page5" data-theme="e">
 	<div data-role="header" data-position="fixed" data-theme="b">
 		<h1>Contact</h1>
 		<a href="#page"data-transition="flip"data-direction="reverse" class="ui-btn-left">back</a></div>
 	<div data-role="content">
-    <ul id="alphalist" data-role="listview" data-theme="e" >    <li> <a href="tell:+2347051584513"><img src="img/phone.png" class="ui-li-icon"/> Call </a></li>    <li> <a href="mailto:info@dmtdesigntech.com.ng"><img src="img/email.png" class="ui-li-icon"/> Email</a></li>    <li> <a href="http://www.facebook.com/dmtdesigntech/about"><img src="img/facebook.png" class="ui-li-icon"/> Facebook</a></li>  <li><a href="http://www.twitter.com/@techdmt">   <img src="img/twitter.png" class="ui-li-icon"/> Twitter</a></li>   <li>  <a href="http://www.instagram.com/dmtdesigntech"><img src="img/instagram.png" class="ui-li-icon"/> Instagram</a></li>
+    <ul id="alphalist" data-role="listview" data-theme="e" >    <li> <a href="tel:+2347051584513"><img src="img/phone.png" class="ui-li-icon"/> Call </a></li>    <li> <a href="mailto:info@dmtdesigntech.com.ng"><img src="img/email.png" class="ui-li-icon"/> Email</a></li>    <li> <a href="http://www.facebook.com/dmtdesigntech/about"><img src="img/facebook.png" class="ui-li-icon"/> Facebook</a></li>  <li><a href="http://www.twitter.com/@techdmt">   <img src="img/twitter.png" class="ui-li-icon"/> Twitter</a></li>   <li>  <a href="http://www.instagram.com/dmtdesigntech"><img src="img/instagram.png" class="ui-li-icon"/> Instagram</a></li>
       </ul>	
 					
 	</div>
-	<div data-role="footer" data-position="fixed" data-theme="c">
-		<h4>Page Footer</h4>
+	<div data-role="footer" data-position="fixed" data-theme="e">
+		<h4>Footer</h4>
 	</div>
 
 	</div>
 <div data-role="page" id="Aboutpanelpage">
 <div class="ui-mobile-nosupport-boxshadow" data-position="fixed" data-role="header" data-theme="b">
 		<h1>About</h1>
-        <a href="#page" class="ui-btn-left ui-icon-nodisc" data-iconpos="notext"
+        <a href="#page" data-icon="arrow-l" class="ui-icon-nodisc" data-iconpos="notext"
 data-icon="back" data-theme="b"></a></div>
         
   <div data-role="content" id="Aboutapptext"><p>This is a sample business app for the digital design company called Dmt design tech
@@ -208,7 +227,7 @@ data-icon="back" data-theme="b"></a></div>
 <div data-role="page" id="Settingspanelpage">
 <div data-role="header" data-position="fixed" data-theme="b">
 		  <h1>Settings</h1>
-		  <a href="#page" class="ui-btn-left ui-icon-nodisc" data-iconpos="notext"
+		  <a href="#page" data-icon="arrow-l" class="ui-icon-nodisc" data-iconpos="notext"
 data-icon="back" data-theme="b"></a></div>
        <div data-role="content">
   <div data-role="fieldcontain">
@@ -225,8 +244,8 @@ data-icon="back" data-theme="b"></a></div>
 	  </div>
     
       <fieldset class="secondary-buttons">
-            	<a href="#" data-inline="true" data-rel="popup" id="vibrate" data-role="button" data-icon="info">vibrate</a>
-            	<a href="#" id="cancelVibration" data-inline="true" data-icon="delete" data-role="button" disabled>cancel</a>
+            	<a href="#Settingspanelpage" data-inline="true" data-rel="popup" id="vibrate" data-role="button" data-icon="info">vibrate</a>
+            	<a href="#Settingspanelpage" id="cancelVibration" data-inline="true" data-icon="delete" data-role="button" disabled>cancel</a>
             </fieldset>
     
     
@@ -246,18 +265,16 @@ data-icon="back" data-theme="b"></a></div>
 data-icon="back" data-theme="b"></a></div>
         
   <div data-role="content"> 
-        <form method="post" class="userform" style="">
+        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post" class="userform" style="" onSubmit="MM_validateForm('name','','R','email','','RisEmail');return document.MM_returnValue">
             <h2>Send your questions</h2>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
           <label for="email">Email</label>
-            <input type="email" name="email" id="status" value="" data-clear-btn="true" data-mini="true">
-          <label for="email">Question</label>
-            <textarea></textarea>
-            <div class="ui-grid-a">
-                <div class="ui-block-a"><a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a></div>
-                <div class="ui-block-b"><a href="#" data-rel="close" data-role="button" data-theme="b" data-mini="true">Send</a></div>
-            </div>
+            <input type="text" name="email" id="email" value="" data-clear-btn="true" data-mini="true">
+          <label for="question">Question</label>
+            <textarea name="question" id="textfield"> </textarea>
+             <input name="submitbutton" type="submit" formmethod="POST" data-inline="true" value="submit" data-theme="b"/>
+            
         </form>
     <!-- /panel -->
   
@@ -266,9 +283,10 @@ data-icon="back" data-theme="b"></a></div>
 
 <div data-role="page" id="page6">
   <div data-role="content"><div><a href="#page4" class="ui-btn-left">back</a></div>
-      <video style="margin-top:40px;" width="320" height="180" controls >
-        <source src="Assets/State of the race CENSORED.mp4" type="video/mp4">
-      </video>
+    <video style="margin-top:40px;" width="320" height="180" id="video" controls >
+      <source src="Assets/State of the race CENSORED.mp4" playsinline>
+      <!-- playsinline attribute is for the video to display inline on iOS devices -->
+      Sorry; your browser doesn't support HTML5 video in MP4 with H.264. </video>
 	</div>
 	</div>
 </body>
